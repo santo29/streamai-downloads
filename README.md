@@ -55,12 +55,6 @@ Muestra si estás en vivo, el tiempo de transmisión y el consumo de CPU y RAM.
 
 ![Panel principal](docs/capturas/panel-principal.png)
 
-### Vincular canales
-
-Enlaza tus canales. Twitch y Kick se conectan con el host de IA; las demás plataformas quedan en tu perfil.
-
-![Vincular canales](docs/capturas/vincular-canales.png)
-
 ### Host de IA
 
 Lee el chat de Twitch y Kick y responde con tu propia clave. Solo actúa con el Auto-Host encendido y hace como máximo una llamada a la IA cada 8 segundos.
