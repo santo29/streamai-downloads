@@ -144,12 +144,12 @@ Cada respuesta consume saldo de tu proveedor de IA, según sus condiciones y pre
 - Subtítulos en vivo: no funcionan en la app de Windows, porque el servicio de voz falla siempre. Solo responden en la versión web con Chrome, que no transmite a las plataformas.
 - Red de Streamers: se puede leer, pero no publicar.
 - APK de Android: sigue siendo el de la versión 1.6.0. No transmite ni responde el chat con IA.
-- Voz del host de IA: suena en tus altavoces y no entra en la mezcla del directo. Solo pueden oírla tus espectadores si compartes pantalla con Clonar Pantalla, que captura el sonido del equipo.
+- Voz del host de IA: suena en tus altavoces y no entra en la mezcla del directo. Solo pueden oírla tus espectadores si compartes pantalla con Clonar Pantalla, que en la versión 1.9.0 captura el sonido del equipo.
 - Chat de Kick: la app lo lee desde su página pública. Si Kick cambia su sistema, puede dejar de funcionar; en ese caso la app lo avisa.
 
 ## Estado de las pruebas
 
-Esta versión se probó en un Intel Core i3-8130U con Windows 10, usando un servidor RTMP local, cámara y micrófono simulados, un proveedor de IA simulado y los chats públicos de Twitch y Kick en solo lectura.
+La versión 1.9.0 se probó en un Intel Core i3-8130U con Windows 10, usando un servidor RTMP local, cámara y micrófono simulados, un proveedor de IA simulado y los chats públicos de Twitch y Kick en solo lectura.
 
 Sin probar todavía: transmitir a cuentas reales, claves reales de OpenAI, Anthropic, Google Gemini y ElevenLabs, publicar respuestas en el chat, una cámara y un micrófono físicos, los lentes faciales con un rostro real y Windows 11.
 
@@ -162,7 +162,7 @@ Medición del autor en un Intel Core i3-8130U de 2 núcleos con gráficos UHD 62
 | libx264 (software) | 0.89x | 50.5 % |
 | h264_qsv (GPU) | 1.00x | 15.6 % |
 
-La prueba con GPU duró 11 minutos, sin fotogramas perdidos. La señal RTMP se limita a 1440p y 9 Mbps. En reposo, en el Motor de Streaming, la app usa entre 8 % y 10 % de la CPU en ese mismo equipo. Los resultados pueden variar en otros equipos.
+La prueba con GPU duró 11 minutos, sin fotogramas perdidos. La señal RTMP se limita a 1440p y 9 Mbps. En reposo, en el Motor de Streaming, la versión 1.9.0 usa entre 8 % y 10 % de la CPU en ese mismo equipo; la 1.8.2 usa entre 41 % y 42 %. Los resultados pueden variar en otros equipos.
 
 ## Privacidad
 
