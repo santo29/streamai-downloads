@@ -1,23 +1,33 @@
-<!-- Plantilla para las notas de CADA release. Copia esto, describe lo nuevo arriba
-     y rellena SHA-256 + VirusTotal abajo. Mantén el bloque ⭐ al final siempre. -->
+<!-- Plantilla para las notas de cada versión.
+     La app muestra las tres primeras líneas en el aviso de actualización, hasta
+     180 caracteres. Escríbelas como frases cortas en texto plano, sin títulos.
+     Antes de publicar, rellena los enlaces de VirusTotal y los SHA-256. -->
+Primer cambio importante, en una frase corta.
+Segundo cambio importante.
+Tercer cambio importante.
 
-## 🆕 Novedades de esta versión
-- (describe en 3-5 viñetas qué mejoró, en lenguaje de streamer, no técnico)
+## Cambios
 
-## ⬇️ Descargar
-- 🪟 **Windows:** StreamAI-Studio-Windows-Setup.exe
-- 🤖 **Android:** StreamAI-Studio-Android.apk
-- 🌐 **Demo web (sin instalar):** https://streamai-studio-db.web.app
+- Un cambio por línea, en lenguaje concreto. Incluye la cifra si hay una medición.
 
-## 🔍 Verificación
-- VirusTotal Windows: <!-- pega el enlace del reporte -->
-- VirusTotal Android: <!-- pega el enlace del reporte -->
-- **SHA-256**
-  - `StreamAI-Studio-Windows-Setup.exe` — `<hash>`
-  - `StreamAI-Studio-Android.apk` — `<hash>`
+## Descargas
 
----
-### ⭐ ¿Te sirve StreamAI Studio?
-Es gratis y lo mantengo yo solo. Una estrella ayuda muchísimo a que más streamers lo
-descubran (y a que yo siga sacando updates).
-👉 https://github.com/santo29/streamai-downloads
+- Windows: `StreamAI-Studio-Windows-Setup.exe`
+- Android: `StreamAI-Studio-Android.apk`
+- Versión web, sin instalar: https://streamai-studio-db.web.app
+
+El instalador de Windows no tiene firma digital. Si aparece SmartScreen, elige Más información y luego Ejecutar de todas formas.
+
+## Verificación
+
+VirusTotal:
+
+- Windows: <!-- enlace del informe -->
+- Android: <!-- enlace del informe -->
+
+SHA-256:
+
+- `StreamAI-Studio-Windows-Setup.exe`: `<hash>`
+- `StreamAI-Studio-Android.apk`: `<hash>`
+
+Para comprobarlo en PowerShell: `Get-FileHash <archivo> -Algorithm SHA256`
