@@ -18,6 +18,21 @@ El instalador de Windows no tiene firma digital, así que Windows SmartScreen se
 
 La versión completa es la de Windows, porque incluye el motor de transmisión local con FFmpeg. La versión web y el APK sirven para probar el estudio, pero no transmiten a las plataformas ni responden el chat con IA.
 
+## Problemas conocidos en la versión 1.8.2
+
+La descarga actual sigue siendo la versión 1.8.2. Las funciones y capturas de esta página corresponden a la 1.9.0, ya preparada y pendiente de publicar. Estos fallos de la 1.8.2 están corregidos en la 1.9.0:
+
+- Host de IA en Kick: no recibe mensajes, porque Kick cambió su sistema de chat. En Twitch sí funciona.
+- Coste de la IA: en un chat activo la app hace una llamada al proveedor por cada mensaje, sin límite, y puede agotar tu saldo rápido.
+- Errores de la IA: si el proveedor rechaza la clave o no responde, la app no lo muestra.
+- Google Gemini: el modelo predeterminado de la app ya no existe, así que no responde.
+- Clonar Pantalla: se transmite sin el sonido del equipo, así que el juego no se oye.
+- Clips automáticos: no arrancan. Al pulsar Inicializar Módulo aparece un aviso de error.
+- Micrófono: la cámara lo abre aunque el control diga apagado. Si lo activas en pleno directo, no se oye hasta la siguiente transmisión.
+- Claves de transmisión: aparecen en el registro de Logs & Diagnóstico. No muestres esa pantalla a nadie.
+- Mesa de Audio: los controles de Micrófono y Master Out no afectan al Motor de Streaming.
+- Panel principal: muestra datos que no son reales, como la licencia, el consumo de tokens y la latencia. La tienda muestra compras sin efecto.
+
 ## Funciones
 
 Capturas de la versión 1.9.0 con datos de ejemplo.
@@ -160,7 +175,7 @@ Las claves se guardan en el equipo, cifradas con una clave derivada del disposit
 - La app consulta la API de GitHub al iniciar y cada 6 horas para buscar actualizaciones.
 - Al vincular un canal de Twitch, la app lo verifica con el servicio decapi.me.
 
-El micrófono está apagado por defecto y la cámara no lo abre. Solo se activa si lo enciendes y das permiso.
+En la versión 1.9.0 el micrófono está apagado por defecto y la cámara no lo abre. Solo se activa si lo enciendes y das permiso.
 
 ## Verificar las descargas
 
