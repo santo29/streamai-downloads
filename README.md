@@ -1,6 +1,6 @@
 # StreamAI Studio
 
-Aplicación para Windows que transmite en vivo a varias plataformas a la vez e incluye un host de IA para el chat de Twitch y Kick.
+Aplicación para Windows que transmite en vivo a varias plataformas a la vez e incluye un host de IA para el chat de Twitch.
 
 [![Última versión](https://img.shields.io/github/v/release/santo29/streamai-downloads)](https://github.com/santo29/streamai-downloads/releases/latest)
 
@@ -16,12 +16,30 @@ StreamAI Studio es gratuito y de código cerrado. Este repositorio contiene los 
 
 La versión completa es la de Windows, porque incluye el motor de transmisión local con FFmpeg. La versión web y el APK sirven para probar el estudio, pero no transmiten a las plataformas ni responden el chat con IA. El APK no ha cambiado desde la versión 1.6.0.
 
+## Problemas conocidos en la versión 1.8.2
+
+Comprobados en noviembre de 2026 al probar la versión publicada. Están corregidos en el código de la próxima versión, que aún no se ha publicado:
+
+- Host de IA en Kick: no recibe mensajes, porque Kick cambió su sistema de chat. En Twitch sí funciona.
+- Coste de la IA: en un chat activo la app hace una llamada al proveedor por cada mensaje, sin límite, y puede agotar tu saldo rápido.
+- Errores de la IA: si el proveedor rechaza la clave o no responde, la app no lo muestra.
+- Google Gemini: el modelo predeterminado de la app ya no existe, así que no responde.
+- Clonar Pantalla: se transmite sin el sonido del equipo, así que el juego no se oye.
+- Clips automáticos: no arrancan. Al pulsar Inicializar Módulo aparece un aviso de error.
+- Micrófono: si lo activas en pleno directo, no se oye hasta la siguiente transmisión.
+- Mesa de Audio: los controles de Micrófono y Master Out no afectan al Motor de Streaming.
+- Panel principal: muestra datos que no son reales, como la licencia, el consumo de tokens y la latencia. La tienda muestra compras sin efecto.
+
+Sin corregir todavía:
+
+- Subtítulos en vivo: no funcionan en la app de Windows.
+- Red de Streamers: se puede leer, pero no publicar.
+
 ## Funciones
 
 - Transmisión a varios destinos. Envía la misma señal por RTMP o RTMPS a Twitch, YouTube, Kick, Facebook, TikTok y otras plataformas, o a un servidor propio. Si un destino falla, los demás siguen en vivo.
-- Host de IA. Lee los mensajes de Twitch y Kick y responde con OpenAI, Anthropic o Google Gemini, usando tu propia clave. Puede decir las respuestas en voz alta y, si autorizas una cuenta, escribirlas en el chat. No lee los chats de YouTube, Facebook ni TikTok, y solo funciona mientras la app esté abierta.
-- Clips automáticos. Guarda cerca de 30 segundos de video cuando detecta un pico de volumen o seis mensajes de chat en cuatro segundos. Los clips se exportan en formato WebM.
-- Subtítulos en vivo. Reconocen tu voz y la traducen a uno de 11 idiomas. Necesitan internet y funcionan mejor en la versión web con Chrome, porque el servicio de voz puede fallar en la app de Windows.
+- Host de IA. Lee los mensajes de Twitch y responde con OpenAI o Anthropic, usando tu propia clave. Puede decir las respuestas en voz alta y, si autorizas una cuenta, escribirlas en el chat. No lee los chats de YouTube, Facebook ni TikTok, y solo funciona mientras la app esté abierta.
+- Subtítulos en vivo. Reconocen tu voz y la traducen a uno de 11 idiomas, pero solo en la versión web con Chrome, que no transmite a las plataformas.
 - Filtros y lentes. Incluye 20 filtros de video, 8 lentes con seguimiento facial (MediaPipe), lentes propios creados a partir de una imagen y lentes de Snapchat mediante Camera Kit.
 - Automatización 24/7. Reproduce en bucle listas de videos o música, o retransmite una emisora en vivo (Icecast, Shoutcast o HLS).
 - Codificación por GPU. Usa NVENC, Quick Sync o AMF si están disponibles, y libx264 si no hay GPU compatible.
@@ -69,7 +87,7 @@ Las claves se guardan en el equipo, cifradas con una clave derivada del disposit
 - Los mensajes del chat y tu clave van al proveedor de IA que elijas.
 - Las respuestas van a ElevenLabs, solo si configuras esa voz.
 - Tu voz va al servicio de reconocimiento del navegador y el texto a Google Translate, solo si activas los subtítulos.
-- Lo que publiques en Red de Streamers, incluidas imágenes y notas de voz, se guarda en Firebase.
+- Red de Streamers lee sus mensajes desde Firebase.
 - La app consulta la API de GitHub al iniciar y cada 6 horas para buscar actualizaciones.
 - Al vincular un canal de Twitch, la app lo verifica con el servicio decapi.me.
 
@@ -102,7 +120,7 @@ Desarrollado por Santo Montilla ([santo29](https://github.com/santo29)) en Repú
 <details>
 <summary>English</summary>
 
-StreamAI Studio is a free, closed-source Windows app for streaming to several platforms at once over RTMP. It includes an AI host for Twitch and Kick chat that uses your own OpenAI, Anthropic or Google Gemini key. It also offers automatic clips, translated live captions, face filters, 24/7 playlists and GPU encoding.
+StreamAI Studio is a free, closed-source Windows app for streaming to several platforms at once over RTMP. It includes an AI host for Twitch chat that uses your own OpenAI or Anthropic key. It also offers face filters, 24/7 playlists and GPU encoding. Version 1.8.2 has known problems, listed in Spanish above.
 
 The web version and the Android APK let you try the studio, but they do not stream or answer chat with AI. See [TERMS.md](TERMS.md) for the terms of use, which are in Spanish.
 
