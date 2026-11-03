@@ -141,7 +141,7 @@ Cada respuesta consume saldo de tu proveedor de IA, según sus condiciones y pre
 
 ## Limitaciones conocidas
 
-- Subtítulos en vivo: no funcionan en la app de Windows, porque el servicio de voz falla siempre. Solo responden en la versión web con Chrome, que no transmite a las plataformas.
+- Subtítulos en vivo: falta confirmarlos. En nuestra prueba (Windows 10, micrófono simulado), la app de Windows recibe un error de red del servicio de voz y no muestra texto, tanto en la 1.8.2 como en la 1.9.0. En Chrome ese error no aparece, pero tampoco llegó texto. Falta probar con un micrófono real.
 - Red de Streamers: se puede leer, pero no publicar.
 - APK de Android: sigue siendo el de la versión 1.6.0. No transmite ni responde el chat con IA.
 - Voz del host de IA: suena en tus altavoces y no entra en la mezcla del directo. Solo pueden oírla tus espectadores si compartes pantalla con Clonar Pantalla, que en la versión 1.9.0 captura el sonido del equipo.
@@ -170,7 +170,7 @@ Las claves se guardan en el equipo, cifradas con una clave derivada del disposit
 
 - Con el Auto-Host encendido, los mensajes del chat y tu clave van al proveedor de IA que elijas.
 - Las respuestas van a ElevenLabs, solo si configuras esa voz.
-- Si activas los subtítulos en la versión web, tu voz va al servicio de reconocimiento del navegador y el texto a Google Translate.
+- Si activas los subtítulos, tu voz va al servicio de reconocimiento del navegador y el texto a Google Translate.
 - Red de Streamers lee sus mensajes desde Firebase.
 - La app consulta la API de GitHub al iniciar y cada 6 horas para buscar actualizaciones.
 - Al vincular un canal de Twitch, la app lo verifica con el servicio decapi.me.
