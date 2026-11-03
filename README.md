@@ -95,7 +95,7 @@ StreamAI Studio es freeware y se entrega sin garantía. Consulta [TERMS.md](TERM
 
 ## Soporte
 
-Puedes informar de errores en [Issues](https://github.com/santo29/streamai-downloads/issues). Si el proyecto te resulta útil, puedes darle una estrella o apoyarlo con el botón Sponsor.
+Puedes informar de errores en [Issues](https://github.com/santo29/streamai-downloads/issues). Si el proyecto te resulta útil, puedes darle una estrella o hacer una [donación por PayPal](https://www.paypal.com/donate/?business=rodriguezsanto17%40gmail.com&no_recurring=0&currency_code=USD&item_name=Apoyo%20a%20StreamAI%20Studio).
 
 Desarrollado por Santo Montilla ([santo29](https://github.com/santo29)) en República Dominicana.
 
